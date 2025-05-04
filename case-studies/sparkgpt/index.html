@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SparkGPT Case Study - Musa Tahir</title>
+    
+    <!-- Tailwind and custom styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              dark: {
+                900: '#121721',
+                800: '#1a2233',
+                700: '#242e42',
+                600: '#2e3a51',
+                500: '#3d4a63',
+              },
+              neon: {
+                green: '#4ade80',
+                blue: '#0ea5e9',
+                purple: '#a78bfa',
+              },
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Case Study Styles -->
+    <link rel="stylesheet" href="../case-study.css">
+</head>
+<body class="bg-dark-900 text-white">
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-dark-900/80 backdrop-blur-lg border-b border-white/10">
+        <nav class="container py-3 px-4 md:px-6 lg:px-8 mx-auto max-w-7xl">
+            <div class="flex items-center justify-between">
+                <!-- Left side - Back button -->
+                <a href="../../index.html" class="text-lg md:text-xl font-bold text-neon-green hover:underline flex items-center">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    <span class="hidden sm:inline">Back to Portfolio</span>
+                    <span class="sm:hidden">Back</span>
+                </a>
+
+                <!-- Right side - Section links -->
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8 text-sm lg:text-base">
+                    <a href="#context" class="text-white/80 hover:text-neon-green transition-colors py-1 border-b-2 border-transparent hover:border-neon-green">Context</a>
+                    <a href="#audience" class="text-white/80 hover:text-neon-green transition-colors py-1 border-b-2 border-transparent hover:border-neon-green">Audience</a>
+                    <a href="#goals" class="text-white/80 hover:text-neon-green transition-colors py-1 border-b-2 border-transparent hover:border-neon-green">Goals</a>
+                    <a href="#exploration" class="text-white/80 hover:text-neon-green transition-colors py-1 border-b-2 border-transparent hover:border-neon-green">Exploration</a>
+                    <a href="#prototypes" class="text-white/80 hover:text-neon-green transition-colors py-1 border-b-2 border-transparent hover:border-neon-green">Prototypes</a>
+                    <a href="#reflections" class="text-white/80 hover:text-neon-green transition-colors py-1 border-b-2 border-transparent hover:border-neon-green">Reflection</a>
+                    <a href="#closing" class="text-white/80 hover:text-neon-green transition-colors py-1 border-b-2 border-transparent hover:border-neon-green">Closing</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="md:hidden text-white/80 hover:text-neon-green p-2" id="mobile-menu-button" aria-label="Toggle menu">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden absolute left-0 right-0 top-full bg-dark-900/95 backdrop-blur-lg border-b border-white/10" id="mobile-menu">
+                <div class="container mx-auto px-4 py-3 space-y-3">
+                    <a href="#context" class="block text-white/80 hover:text-neon-green transition-colors py-2 px-3 rounded-lg hover:bg-white/5">Context</a>
+                    <a href="#audience" class="block text-white/80 hover:text-neon-green transition-colors py-2 px-3 rounded-lg hover:bg-white/5">Audience</a>
+                    <a href="#goals" class="block text-white/80 hover:text-neon-green transition-colors py-2 px-3 rounded-lg hover:bg-white/5">Goals</a>
+                    <a href="#exploration" class="block text-white/80 hover:text-neon-green transition-colors py-2 px-3 rounded-lg hover:bg-white/5">Exploration</a>
+                    <a href="#prototypes" class="block text-white/80 hover:text-neon-green transition-colors py-2 px-3 rounded-lg hover:bg-white/5">Prototypes</a>
+                    <a href="#reflections" class="block text-white/80 hover:text-neon-green transition-colors py-2 px-3 rounded-lg hover:bg-white/5">Reflection</a>
+                    <a href="#closing" class="block text-white/80 hover:text-neon-green transition-colors py-2 px-3 rounded-lg hover:bg-white/5">Closing</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-28 md:pt-32 pb-12">
+        <div class="container px-4 md:px-6 lg:px-8 mx-auto max-w-4xl">
+            <h1 class="text-3xl md:text-5xl font-bold mb-6 text-white/80">
+                Designing SparkGPT: Accelerating Solar Development through Conversational AI
+            </h1>
+
+            <div class="bg-dark-800/50 rounded-xl p-6 mb-8 border border-white/10">
+                <h2 class="text-xl font-semibold mb-4">My Contributions</h2>
+                <ul class="list-disc list-inside text-white/80 space-y-2">
+                    <li>Led Design 1 and the Menu Viewer low-fidelity prototype</li>
+                    <li>Designed multiple screens in the high-fidelity prototype</li>
+                    <li>Implemented final design revisions</li>
+                    <li>Recorded and edited both Loom walkthrough videos</li>
+                </ul>
+                <p class="mt-4 text-white/80">
+                    Collaborators: Jasmine Liu, Fuka Ikeda, Max Boonbandansook
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="pb-16">
+        <div class="container px-4 md:px-6 lg:px-8 mx-auto max-w-4xl">
+            <!-- Context Section -->
+            <section id="context" class="mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-white/80">
+                    Context / Problem
+                </h2>
+                <div class="prose prose-invert max-w-none">
+                    <p class="text-white/80 mb-4">
+                        Solar and battery developers spend significant time gathering critical information like zoning rules, permitting hurdles, and historical records. In the United States, there are 3000+ counties, 10,000+ building permit jurisdictions, and more than 2,000 energy-regulating entities—each with their own set of rules <span class="text-white/80">[Source: SparkAI]</span>.
+                    </p>
+                    <p class="text-white/80 mb-4">
+                        SparkAI currently compiles this data into static reports: executive summaries with useful information for developers. However, these reports can't capture every data point, and manually navigating them remains inefficient.
+                    </p>
+                    <p class="text-white/80">
+                        To resolve this issue, our team was asked to design SparkGPT: a new interactive search feature inside Spark's web platform that coexists with the report. Using SparkGPT, users can ask nuanced questions and quickly receive verified, cited answers, bridging the gap between raw data and the high-level insights captured in the report.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Audience Section -->
+            <section id="audience" class="mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-white/80">
+                    Audience
+                </h2>
+                <p class="text-white/80">
+                    Our target users are solar and battery developers: time-constrained professionals who need fast, trustworthy answers from complex regulatory data. They rely on Spark's executive reports but need more interactivity and source traceability to streamline decision-making.
+                </p>
+            </section>
+
+            <!-- Project Goals Section -->
+            <section id="goals" class="mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-white/80">
+                    Project Goals
+                </h2>
+                <ul class="space-y-4 text-white/80">
+                    <li class="flex items-start">
+                        <span class="text-white/80 mr-3">•</span>
+                        <span>Explore Design Directions: Brainstorm and evaluate multiple interfaces for SparkGPT and its integration with SparkAI's existing report system</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-white/80 mr-3">•</span>
+                        <span>Build Interactive Prototypes:
+                            <ul class="ml-6 mt-2 space-y-2">
+                                <li>Create a basic low-fidelity prototype</li>
+                                <li>Develop an interactive high-fidelity prototype to demonstrate functionality</li>
+                            </ul>
+                        </span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-white/80 mr-3">•</span>
+                        <span>Support Source Transparency: Ensure SparkGPT responses include clear, clickable citations</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-white/80 mr-3">•</span>
+                        <span>Balance Functionality and Usability: Design for both efficiency and clarity, especially for time-constrained solar developers</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Early Exploration Section -->
+            <section id="exploration" class="mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-white/80">
+                    Early Exploration
+                </h2>
+                <p class="text-white/80 mb-6">
+                    We sketched four possible designs for the SparkGPT feature:
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-dark-800/50 rounded-xl overflow-hidden border border-white/10">
+                        <img src="images/design-1.png" alt="Design 1" class="w-full aspect-video object-cover">
+                    </div>
+                    <div class="bg-dark-800/50 rounded-xl overflow-hidden border border-white/10">
+                        <img src="images/design-2.png" alt="Design 2" class="w-full aspect-video object-cover">
+                    </div>
+                    <div class="bg-dark-800/50 rounded-xl overflow-hidden border border-white/10">
+                        <img src="images/design-3.png" alt="Design 3" class="w-full aspect-video object-cover">
+                    </div>
+                    <div class="bg-dark-800/50 rounded-xl overflow-hidden border border-white/10">
+                        <img src="images/design-4.png" alt="Design 4" class="w-full aspect-video object-cover">
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-white/80">User Workflows</h3>
+                        <ul class="list-disc list-inside text-white/80 space-y-2">
+                            <li>Option 1: SparkGPT integrated into Reports, linking each chat to a specific report</li>
+                            <li>Option 2: SparkGPT as a standalone feature on the SparkAI site</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-white/80">Layout Concepts</h3>
+                        <ul class="list-disc list-inside text-white/80 space-y-2">
+                            <li>Explored side-by-side and top-bottom layouts for chat + report views</li>
+                            <li>Considered citation depth and how to make them explorable</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-white/80">Design Philosophy</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-semibold mb-2 text-white/80">Home Screen Designs:</h4>
+                                <ul class="list-disc list-inside text-white/80 space-y-2">
+                                    <li>Design #2: Information-dense landing</li>
+                                    <li>Designs #1 & #4: Modern, minimalist aesthetics, matching SparkAI's current branding</li>
+                                    <li>Final decision: Minimalist enhancement to maintain product cohesion</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-2 text-white/80">Chat Screens:</h4>
+                                <ul class="list-disc list-inside text-white/80 space-y-2">
+                                    <li>AI-like interface with suggestive prompts</li>
+                                    <li>Split-screen version for transparency of citations</li>
+                                    <li>Design #3 introduced a subtle search button, which was later revised based on client confusion around the metaphor</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Prototypes Section -->
+            <section id="prototypes" class="mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-white/80">
+                    Prototypes
+                </h2>
+                <p class="text-white/80 mb-6">
+                    Our prototyping process evolved from initial wireframes to a fully interactive design:
+                </p>
+
+                <h3 class="text-xl font-semibold mb-6 text-white/80">Initial Wireframes</h3>
+                <div class="grid grid-cols-1 gap-8 mb-12">
+                    <div class="bg-dark-800/50 rounded-xl overflow-hidden border border-white/10">
+                        <img src="images/menu-viewer.png" alt="Menu Viewer" class="w-full">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Menu Viewer</h3>
+                            <p class="text-white/80">Built off Design 3, this version embedded SparkGPT within the Reports section, allowing chat histories to stay contextualized within a specific report.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-dark-800/50 rounded-xl overflow-hidden border border-white/10">
+                        <img src="images/report-chat-screen.png" alt="Report & Chat View" class="w-full">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Report & Chat View</h3>
+                            <p class="text-white/80">Inspired by Designs 1, 3, and 4, this allowed users to scroll the report and query SparkGPT simultaneously via a side-by-side layout.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-dark-800/50 rounded-xl overflow-hidden border border-white/10">
+                        <img src="images/citation-chat-screen.png" alt="Citation & Chat View" class="w-full">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Citation & Chat View</h3>
+                            <p class="text-white/80">Blended Designs 2 and 3 to prioritize citation traceability with each SparkGPT response clearly linked to its raw source.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <a href="https://www.loom.com/share/a697c08463dd429eb91614ba0a487180?sid=d90d8c51-ddbd-4e3a-a15c-f99f7a771c7c" target="_blank" rel="noopener noreferrer" class="text-neon-green hover:underline">
+                        → View our initial wireframe walkthrough
+                    </a>
+                </div>
+
+                <h3 class="text-xl font-semibold mb-6 text-white/80">Final Interactive Design</h3>
+                <p class="text-white/80 mb-6">
+                    Following a design review with SparkAI, we refined our approach with these key features:
+                </p>
+
+                <div class="space-y-6 mb-8">
+                    <div>
+                        <h4 class="font-semibold mb-2 text-white/80">Dual Entry Points:</h4>
+                        <ul class="list-disc list-inside text-white/80 space-y-2">
+                            <li>Homepage ➝ Choose report ➝ Launch SparkGPT</li>
+                            <li>From a report ➝ Click chat icon to launch SparkGPT side-by-side</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-2 text-white/80">Enhanced Features:</h4>
+                        <ul class="list-disc list-inside text-white/80 space-y-2">
+                            <li>Searchable Chat Logs: Enables quick recall of prior queries</li>
+                            <li>Clickable Citations: Direct links to the exact text inside source documents</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex space-x-4">
+                    <a href="https://www.loom.com/share/59abd0312c1c47728616b2667a1c5a7b?sid=f22df487-d8a6-418c-8988-f742666a9683" target="_blank" rel="noopener noreferrer" class="text-neon-green hover:underline">
+                        → See our final demo
+                    </a>
+                    <a href="https://www.figma.com/proto/ha3aECt87cia06GMfs9Pcx/SparkAI-Prototype?node-id=10-2&t=CcjtvQ3jdjD6u65Y-1&starting-point-node-id=10%3A2" target="_blank" rel="noopener noreferrer" class="text-neon-green hover:underline">
+                        → Try our interactive prototype
+                    </a>
+                </div>
+            </section>
+
+            <!-- Reflections Section -->
+            <section id="reflections" class="mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-white/80">
+                    Reflections from Feedback
+                </h2>
+                
+                <div class="space-y-8">
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4 text-white/80">Citation Rendering & Adaptability</h3>
+                            <ul class="list-disc list-inside text-white/80 space-y-2">
+                                <li>The clean, clickable citation UI was well-received.</li>
+                                <li>Future: Adapt citation display dynamically when a user switches between cities, perhaps by filtering or grouping sources by location.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4 text-white/80">Button to Launch/Close SparkGPT</h3>
+                            <ul class="list-disc list-inside text-white/80 space-y-2">
+                                <li>Users found the top-right open/close icon intuitive for entering and exiting SparkGPT.</li>
+                                <li>Future: Explore a persistent toggle in the navigation bar so users can access the chat from anywhere in the report.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4 text-white/80">Scope of Search Feature</h3>
+                            <ul class="list-disc list-inside text-white/80 space-y-2">
+                                <li>Currently, SparkGPT is tied to a single locality, which keeps results focused.</li>
+                                <li>Future: Offer a user flow where users launch SparkGPT before selecting any specific report first.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4 text-white/80">Suggested Questions on Chat Screen</h3>
+                            <ul class="list-disc list-inside text-white/80 space-y-2">
+                                <li>Suggested-question buttons smooth the first-time experience by guiding users toward meaningful queries.</li>
+                                <li>Future: Personalize those suggestions based on user expertise (e.g., "Getting Started" for new users, "Advanced Filters" for power users).</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4 text-white/80">Leveraging PDF Mental Models</h3>
+                            <ul class="list-disc list-inside text-white/80 space-y-2">
+                                <li>Users expected PDF-style interactions: scrolling, pagination, and inline annotations.</li>
+                                <li>Future: Mimic these affordances in the web app to lower the barrier of entry, such as adding page-like navigation or hover annotations.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Closing Thoughts Section -->
+            <section id="closing">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-white/80">
+                    Closing Thoughts
+                </h2>
+                <div class="prose prose-invert max-w-none">
+                    <p class="text-white/80 mb-4">
+                        Our experience designing the SparkGPT feature challenged us to think deeply about how UI design choices can shape usability and trust. In particular, our final meeting with the SparkAI team initiated important discussion around how to handle citation granularity, entry points into the chat interface, and the global scope of chats.
+                    </p>
+                    <p class="text-white/80 mb-4">
+                        For an early iteration of SparkGPT, constraining users through the UI—such as by providing suggested queries and limiting chats to specific reports—helps reduce the need for users to make complex decisions. Looking ahead, SparkGPT could expand its scope through a few exciting future directions:
+                    </p>
+                    <ul class="list-disc list-inside text-white/80 mb-6">
+                        <li>Inline citations that allow users to verify query responses by sentence.</li>
+                        <li>Support for queries across multiple locations instead of one town or county at a time.</li>
+                        <li>Implementation of features like global vs. per-location chat history.</li>
+                    </ul>
+                    <p class="text-white/80 mb-4">
+                        We are grateful to SparkAI for the opportunity to contribute hands-on to the development of SparkGPT. Special thanks to Julia Wu and Tae Kim for their meaningful insights into the field of renewable energy and their thoughtful feedback on our design iterations.
+                    </p>
+                    <p class="text-white/80">
+                        Moving forward, we are excited about the possibilities ahead in the future of solar development!
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-900 text-white py-6 border-t border-white/10">
+        <div class="container px-4 md:px-6 lg:px-8 mx-auto text-center">
+            <a href="../../index.html" class="text-neon-green hover:underline">
+                <i class="fas fa-arrow-left mr-2"></i>Back to Portfolio
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // Toggle aria-expanded
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Sticky navbar behavior
+        const header = document.querySelector('header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            // Add shadow and adjust opacity when scrolling
+            if (currentScroll > 0) {
+                header.classList.add('shadow-lg');
+                header.style.backgroundColor = 'rgba(18, 23, 33, 0.95)';
+            } else {
+                header.classList.remove('shadow-lg');
+                header.style.backgroundColor = 'rgba(18, 23, 33, 0.8)';
+            }
+        });
+
+        // Enhanced smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    // Adjust offset based on screen size
+                    const headerOffset = window.innerWidth >= 768 ? 100:  80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+
+                    // Update URL without scrolling
+                    history.pushState(null, null, this.getAttribute('href'));
+                }
+            });
+        });
+
+        // Highlight active section in navbar
+        const observerOptions = {
+            root: null,
+            rootMargin: '-100px 0px -50%',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    document.querySelectorAll('.md\\:flex a').forEach(link => {
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('text-neon-green', 'border-neon-green');
+                        } else {
+                            link.classList.remove('text-neon-green', 'border-neon-green');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section[id]').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,104 @@
+/* Case Study Shared Styles */
+:root {
+  --dark-900: #121721;
+  --dark-800: #1a2233;
+  --dark-700: #242e42;
+  --dark-600: #2e3a51;
+  --dark-500: #3d4a63;
+  --neon-green: #4ade80;
+  --neon-blue: #0ea5e9;
+  --neon-purple: #a78bfa;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--dark-900);
+  color: white;
+  line-height: 1.6;
+}
+
+/* Header */
+.case-study-header {
+  background-color: var(--dark-800);
+  padding: 4rem 2rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Project Overview */
+.project-overview {
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  color: var(--neon-green);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Content Sections */
+.content-section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background-color: var(--dark-800);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Images */
+.case-study-image {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin: 2rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Lists */
+.feature-list {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-list li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.feature-list li::before {
+  content: "→";
+  color: var(--neon-green);
+  position: absolute;
+  left: 0;
+}
+
+/* Back to Home */
+.back-to-home {
+  display: inline-block;
+  margin: 2rem 0;
+  color: var(--neon-green);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.back-to-home:hover {
+  color: var(--neon-blue);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .case-study-header {
+    padding: 2rem 1rem;
+  }
+  
+  .content-section {
+    padding: 1rem;
+  }
+} 

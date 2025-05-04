@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quench Water Dispenser Case Study - Musa Tahir</title>
+    
+    <!-- Tailwind and custom styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              dark: {
+                900: '#121721',
+                800: '#1a2233',
+                700: '#242e42',
+                600: '#2e3a51',
+                500: '#3d4a63',
+              },
+              neon: {
+                green: '#4ade80',
+                blue: '#0ea5e9',
+                purple: '#a78bfa',
+              },
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Case Study Styles -->
+    <link rel="stylesheet" href="../case-study.css">
+</head>
+<body class="bg-dark-900 text-white">
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-dark-900/80 backdrop-blur-lg border-b border-white/10">
+        <nav class="container py-3 px-4 md:px-6 lg:px-8 mx-auto max-w-7xl">
+            <div class="flex items-center justify-between">
+                <!-- Left side - Back button -->
+                <a href="../../index.html" class="text-lg md:text-xl font-bold text-neon-green hover:underline flex items-center">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    <span class="hidden sm:inline">Back to Portfolio</span>
+                    <span class="sm:hidden">Back</span>
+                </a>
+
+                <!-- Right side - Section links -->
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8 text-sm lg:text-base">
+                    <a href="#context" class="text-white/80 hover:text-neon-green transition-colors py-1 border-b-2 border-transparent hover:border-neon-green">Context</a>
+                    <a href="#audience" class="text-white/80 hover:text-neon-green transition-colors py-1 border-b-2 border-transparent hover:border-neon-green">Audience</a>
+                    <a href="#interface" class="text-white/80 hover:text-neon-green transition-colors py-1 border-b-2 border-transparent hover:border-neon-green">Interface</a>
+                    <a href="#interviews" class="text-white/80 hover:text-neon-green transition-colors py-1 border-b-2 border-transparent hover:border-neon-green">Interviews</a>
+                    <a href="#personas" class="text-white/80 hover:text-neon-green transition-colors py-1 border-b-2 border-transparent hover:border-neon-green">Personas</a>
+                    <a href="#storyboard" class="text-white/80 hover:text-neon-green transition-colors py-1 border-b-2 border-transparent hover:border-neon-green">Storyboard</a>
+                    <a href="#reflection" class="text-white/80 hover:text-neon-green transition-colors py-1 border-b-2 border-transparent hover:border-neon-green">Reflection</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="md:hidden text-white/80 hover:text-neon-green p-2" id="mobile-menu-button" aria-label="Toggle menu">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden absolute left-0 right-0 top-full bg-dark-900/95 backdrop-blur-lg border-b border-white/10" id="mobile-menu">
+                <div class="container mx-auto px-4 py-3 space-y-3">
+                    <a href="#context" class="block text-white/80 hover:text-neon-green transition-colors py-2 px-3 rounded-lg hover:bg-white/5">Context</a>
+                    <a href="#audience" class="block text-white/80 hover:text-neon-green transition-colors py-2 px-3 rounded-lg hover:bg-white/5">Audience</a>
+                    <a href="#interface" class="block text-white/80 hover:text-neon-green transition-colors py-2 px-3 rounded-lg hover:bg-white/5">Interface</a>
+                    <a href="#interviews" class="block text-white/80 hover:text-neon-green transition-colors py-2 px-3 rounded-lg hover:bg-white/5">Interviews</a>
+                    <a href="#personas" class="block text-white/80 hover:text-neon-green transition-colors py-2 px-3 rounded-lg hover:bg-white/5">Personas</a>
+                    <a href="#storyboard" class="block text-white/80 hover:text-neon-green transition-colors py-2 px-3 rounded-lg hover:bg-white/5">Storyboard</a>
+                    <a href="#reflection" class="block text-white/80 hover:text-neon-green transition-colors py-2 px-3 rounded-lg hover:bg-white/5">Reflection</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-28 md:pt-32 pb-12">
+        <div class="container px-4 md:px-6 lg:px-8 mx-auto max-w-4xl">
+            <h1 class="text-3xl md:text-5xl font-bold mb-6 text-white/80">
+                Enhancing Usability in the Quench Water Dispenser Interface
+            </h1>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="pb-16">
+        <div class="container px-4 md:px-6 lg:px-8 mx-auto max-w-4xl">
+            <!-- Background Section -->
+            <section id="context" class="mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-white/80">
+                    Context / Problem
+                </h2>
+                <div class="prose prose-invert max-w-none">
+                    <p class="text-white/80 mb-4">
+                        The Data Science Initiative (DSI) at Brown University previously used a water dispenser that lacked durability and was prone to leakage. To address these issues, the staff replaced it with a new Quench water dispenser, designed to be more reliable and touch-free for improved hygiene and ease of use. The Quench dispenser offers four water options—cold, ambient, sparkling, and hot. Instead of physical buttons, users hover their hand over sensors to toggle between selections and dispense water.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Audience Section -->
+            <section id="audience" class="mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-white/80">
+                    Audience
+                </h2>
+                <p class="text-white/80">
+                    This design focuses on users of the DSI water dispenser, including students, faculty, and staff at Brown University. These users range from frequent visitors who rely on the dispenser daily to occasional users who may encounter it during sporadic visits. The analysis particularly considers both tech-savvy users comfortable with modern interfaces and those who prefer traditional, tactile controls.
+                </p>
+            </section>
+
+            <!-- Interface Analysis Section -->
+            <section id="interface" class="mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-white/80">
+                    Interface Analysis
+                </h2>
+                <div class="bg-dark-800/50 rounded-xl overflow-hidden border border-white/10 mb-2 max-w-xl mx-auto">
+                    <img src="images/interface-sketch.png" alt="Interface sketch of the Quench water dispenser" class="w-full">
+                </div>
+                <div class="text-md text-white/60 italic text-center mb-6">
+                    Interface sketch showing the water dispenser's controls and options.
+                </div>
+                <p class="text-white/80 mb-4">
+                    This interface provides efficient access to clean drinking water with multiple options (cold, sparkling, ambient, and hot). The touch-free hover controls reduce the spread of germs, while the mode selector provides flexibility for different water preferences. However, some users struggle with the lack of pressable buttons, as the hover-based controls are not immediately intuitive and may confuse first-time users.
+                </p>
+                <p class="text-white/80">
+                    While this upgrade aimed to enhance functionality and hygiene, our study reveals that it may have introduced usability challenges for beginner and rushed users. This project examines how people interact with the new interface though interviews, personas, and a storymap documenting user experiences.
+                </p>
+            </section>
+
+        
+            <!-- Interviews Section -->
+            <section id="interviews" class="mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-white/80">
+                    User Interviews
+                </h2>
+                
+                <h3 class="text-xl font-semibold mb-4 text-white/80">Behavioral Observations</h3>
+                <div class="bg-dark-800/50 rounded-xl p-6 mb-8">
+                    <h4 class="font-semibold mb-4 text-white/90">Approach:</h4>
+                    <ul class="list-disc list-inside text-white/80 mb-6">
+                        <li>Users began by placing their bottle on the tray, most did so without even pausing to read instructions.</li>
+                        <li>Some took a few seconds to read the instructions and scan the available options before proceeding.</li>
+                        <li>Users with people waiting behind them tended to act more quickly.</li>
+                    </ul>
+
+                    <h4 class="font-semibold mb-4 text-white/90">Mode Selection:</h4>
+                    <ul class="list-disc list-inside text-white/80 mb-6">
+                        <li>Most users did not need to change the setting, as cold water was most popular and set as default.</li>
+                        <li>Some users hovered their front hand over the mode selector to toggle between the options, while others used their back hand.</li>
+                        <li>Some even unnecessarily touched the button directly, which would sometimes not trigger any interface response.</li>
+                    </ul>
+
+                    <h4 class="font-semibold mb-4 text-white/90">Dispensing Process:</h4>
+                    <ul class="list-disc list-inside text-white/80 mb-6">
+                        <li>Users showed varied interaction patterns with the dispensing button.</li>
+                        <li>Some actively watched the water while filling, others checked their phones.</li>
+                        <li>Bottle alignment issues were common initially.</li>
+                    </ul>
+
+                    <h4 class="font-semibold mb-4 text-white/90">Exit Behavior:</h4>
+                    <ul class="list-disc list-inside text-white/80">
+                        <li>Some users wiped the spout before leaving.</li>
+                        <li>Others left immediately after collecting their water.</li>
+                    </ul>
+                </div>
+
+                <h3 class="text-xl font-semibold mb-4 text-white/80">Interview Findings</h3>
+                <div class="space-y-6">
+                    <div class="bg-dark-800/50 rounded-xl p-6">
+                        <h4 class="font-semibold mb-3 text-white/90">Usage Frequency & Preferences</h4>
+                        <p class="text-white/80">
+                            Frequent users relied on the dispenser for convenience, especially those nearby, valuing its speed, free access, and water options. Occasional users used it when visiting or thirsty. Many preferred it over other dispensers for faster flow, cold water, and hygienic, touch-free controls.
+                        </p>
+                    </div>
+
+                    <div class="bg-dark-800/50 rounded-xl p-6">
+                        <h4 class="font-semibold mb-3 text-white/90">Interface Expectations</h4>
+                        <p class="text-white/80">
+                            Most expected basic options like hot and cold water. Some were surprised by the inclusion of sparkling and ambient settings, and others wanted clearer, step-by-step instructions.
+                        </p>
+                    </div>
+
+                    <div class="bg-dark-800/50 rounded-xl p-6">
+                        <h4 class="font-semibold mb-3 text-white/90">Ease of Navigation</h4>
+                        <p class="text-white/80">
+                            Frequent users found it intuitive, while new users struggled due to unclear instructions. Many mistook the hover interface for physical buttons, leading to confusion. Some reported unresponsiveness, requiring multiple hovers.
+                        </p>
+                    </div>
+
+                    <div class="bg-dark-800/50 rounded-xl p-6">
+                        <h4 class="font-semibold mb-3 text-white/90">Water Setting Preferences</h4>
+                        <p class="text-white/80">
+                            Cold water was easy to access as the default. Sparkling and ambient took more effort to find. Hot water required toggling through all other modes, making it less efficient.
+                        </p>
+                    </div>
+
+                    <div class="bg-dark-800/50 rounded-xl p-6">
+                        <h4 class="font-semibold mb-3 text-white/90">Comparison to Other Dispensers</h4>
+                        <p class="text-white/80">
+                            Most had used button- or lever-based dispensers before. This one felt more hygienic and modern but less intuitive, especially for first-time users. Mode toggling was a common frustration.
+                        </p>
+                    </div>
+
+                    <div class="bg-dark-800/50 rounded-xl p-6">
+                        <h4 class="font-semibold mb-3 text-white/90">Expectations vs. Experience</h4>
+                        <p class="text-white/80">
+                            Most found the dispenser fast and convenient once they understood how it worked. The touch-free feature was appreciated for hygiene, though some still had concerns and wiped the spout before use.
+                        </p>
+                    </div>
+
+                    <div class="bg-dark-800/50 rounded-xl p-6">
+                        <h4 class="font-semibold mb-3 text-white/90">Suggested Improvements</h4>
+                        <p class="text-white/80">
+                            Users wanted more responsive buttons, clearer hover labels, and direct mode selection rather than toggling. Some preferred physical buttons for quicker interaction.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Personas Section -->
+            <section id="personas" class="mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-white/80">
+                    Personas
+                </h2>
+                <p class="text-white/80 mb-8">
+                    Based on our observations, we created two empathy maps to illustrate instances of archetypal users. Such personas represent part of the spectrum of user experiences with the Quench water dispenser.
+                </p>
+
+                <div class="space-y-8">
+                    <div>
+                        <div class="bg-dark-800/50 rounded-xl overflow-hidden border border-white/10 mb-2">
+                            <img src="images/confused-cam.png" alt="Confused Cameron Empathy Map" class="w-full">
+                        </div>
+                        <div class="text-md text-white/60 italic text-center mb-6">
+                            Confused Cameron's Empathy Map
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-dark-800/50 rounded-xl overflow-hidden border border-white/10 mb-2">
+                            <img src="images/holly-hustle.png" alt="Holly Hustle Empathy Map" class="w-full">
+                        </div>
+                        <div class="text-md text-white/60 italic text-center mb-6">
+                            Holly Hustle's Empathy Map
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Storyboard Section -->
+            <section id="storyboard" class="mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-white/80">
+                    Storyboard
+                </h2>
+                <p class="text-white/80 mb-8">
+                    Based on our "Confused Cameron" persona, we created a storyboard mapping out his entire user journey with the Quench water dispenser from start to end. Note that during Cameron's struggle, he fails to realize that the dispenser uses touch-free hover controls, leading to confusion and frustration as he tries to figure out how to toggle between modes.
+                </p>
+
+                <div class="space-y-8">
+                    <div>
+                        <div class="bg-dark-800/50 rounded-xl overflow-hidden border border-white/10 mb-2">
+                            <img src="images/storyboard-p1.png" alt="Storyboard Part 1" class="w-full">
+                        </div>
+                       
+                    </div>
+                    <div>
+                        <div class="bg-dark-800/50 rounded-xl overflow-hidden border border-white/10 mb-2">
+                            <img src="images/storyboard-p2.png" alt="Storyboard Part 2" class="w-full">
+                        </div>
+                      
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reflection Section -->
+            <section class="mb-16" id="reflection">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-white/80">
+                    Reflection
+                </h2>
+                <p class="text-white/80">
+                    Our study of the Quench water dispenser revealed a trade-off between innovation and usability. While the touch-free controls offer modern hygiene benefits, first-time users like "Confused Cameron" struggle with the lack of clear instructions, and even experienced users like "Holly Hustle" find the multi-step toggling process inefficient. To improve the experience, we recommend implementing direct mode selection, clearer hover indicators, and more responsive controls.
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-900 text-white py-6 border-t border-white/10">
+        <div class="container px-4 md:px-6 lg:px-8 mx-auto text-center">
+            <a href="../../index.html" class="text-neon-green hover:underline">
+                <i class="fas fa-arrow-left mr-2"></i>Back to Portfolio
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // Toggle aria-expanded
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Sticky navbar behavior
+        const header = document.querySelector('header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            // Add shadow and adjust opacity when scrolling
+            if (currentScroll > 0) {
+                header.classList.add('shadow-lg');
+                header.style.backgroundColor = 'rgba(18, 23, 33, 0.95)';
+            } else {
+                header.classList.remove('shadow-lg');
+                header.style.backgroundColor = 'rgba(18, 23, 33, 0.8)';
+            }
+        });
+
+        // Enhanced smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    // Adjust offset based on screen size
+                    const headerOffset = window.innerWidth >= 768 ? 100 : 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+
+                    // Update URL without scrolling
+                    history.pushState(null, null, this.getAttribute('href'));
+                }
+            });
+        });
+
+        // Highlight active section in navbar
+        const observerOptions = {
+            root: null,
+            rootMargin: '-100px 0px -50%',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    document.querySelectorAll('.md\\:flex a').forEach(link => {
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('text-neon-green', 'border-neon-green');
+                        } else {
+                            link.classList.remove('text-neon-green', 'border-neon-green');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section[id]').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html> 
