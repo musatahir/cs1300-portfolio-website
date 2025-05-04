@@ -199,67 +199,76 @@
                 </p>
 
                 <div class="overflow-x-auto mb-8">
-                    <table class="w-full bg-dark-800/50 rounded-xl border border-white/10">
-                        <thead>
-                            <tr class="border-b border-white/10">
-                                <th class="p-4 text-left"></th>
-                                <th class="p-4 text-left">Mouse/Touchpad</th>
-                                <th class="p-4 text-left">Keyboard</th>
-                                <th class="p-4 text-left">Touch</th>
+                    <table class="w-full bg-dark-800/50 rounded-xl border border-white/10 block md:table">
+                        <thead class="block md:table-header-group">
+                            <tr class="border-b border-white/10 md:border-none block md:table-row absolute -top-full md:top-auto -left-full md:left-auto md:relative">
+                                <th class="p-4 text-left md:table-cell block"></th>
+                                <th class="p-4 text-left md:table-cell block">Mouse/Touchpad</th>
+                                <th class="p-4 text-left md:table-cell block">Keyboard</th>
+                                <th class="p-4 text-left md:table-cell block">Touch</th>
                             </tr>
                         </thead>
-                        <tbody class="text-white/80">
-                            <tr class="border-b border-white/10">
-                                <td class="p-4 font-semibold">Netflix (Genre Dropdown)</td>
-                                <td class="p-4">
+                        <tbody class="text-white/80 block md:table-row-group">
+                            <tr class="border-b border-white/10 block md:table-row mb-8 md:mb-0 bg-dark-800/50 md:bg-transparent">
+                                <td class="p-4 font-semibold block md:table-cell" data-label="">Netflix (Genre Dropdown)</td>
+                                <td class="p-4 block md:table-cell" data-label="Mouse/Touchpad">
+                                    <span class="md:hidden font-semibold block mb-1">Mouse/Touchpad:</span>
                                     • Click the Genres button to open the dropdown<br>
                                     • Scroll and click to select a genre<br>
                                     • No clear "X" button to close—clicking outside dismisses it
                                 </td>
-                                <td class="p-4">
+                                <td class="p-4 block md:table-cell" data-label="Keyboard">
+                                    <span class="md:hidden font-semibold block mb-1">Keyboard:</span>
                                     • Tab navigates to the dropdown, Enter opens it<br>
                                     • Arrow keys navigate, Enter selects, Esc closes<br>
                                     • Limited keyboard support without screen reader
                                 </td>
-                                <td class="p-4">
+                                <td class="p-4 block md:table-cell" data-label="Touch">
+                                    <span class="md:hidden font-semibold block mb-1">Touch:</span>
                                     • Tap to open "All Categories" dropdown<br>
                                     • Scroll and tap to select a genre<br>
                                     • Click "X" to close (not available on desktop)
                                 </td>
                             </tr>
-                            <tr class="border-b border-white/10">
-                                <td class="p-4 font-semibold">Apple Music (Three-Bar Menu)</td>
-                                <td class="p-4">
+                            <tr class="border-b border-white/10 block md:table-row mb-8 md:mb-0 bg-dark-800/50 md:bg-transparent">
+                                <td class="p-4 font-semibold block md:table-cell" data-label="">Apple Music (Three-Bar Menu)</td>
+                                <td class="p-4 block md:table-cell" data-label="Mouse/Touchpad">
+                                    <span class="md:hidden font-semibold block mb-1">Mouse/Touchpad:</span>
                                     • Click the three-bar menu to open<br>
                                     • Options appear as an overlay (e.g., "Add to Playlist")<br>
                                     • Click outside to close
                                 </td>
-                                <td class="p-4">
+                                <td class="p-4 block md:table-cell" data-label="Keyboard">
+                                    <span class="md:hidden font-semibold block mb-1">Keyboard:</span>
                                     • Tab navigates to the three-bar menu<br>
                                     • Spacebar/Arrow keys highlight options<br>
                                     • Esc closes the menu<br>
                                     • Better keyboard support than Netflix
                                 </td>
-                                <td class="p-4">
+                                <td class="p-4 block md:table-cell" data-label="Touch">
+                                    <span class="md:hidden font-semibold block mb-1">Touch:</span>
                                     • Tap three-bar menu to expand options<br>
                                     • Tap a selection (e.g., "Add to Playlist")<br>
                                     • Tap outside to exit
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="p-4 font-semibold">Microsoft Word (Font Menu)</td>
-                                <td class="p-4">
+                            <tr class="block md:table-row mb-8 md:mb-0 bg-dark-800/50 md:bg-transparent">
+                                <td class="p-4 font-semibold block md:table-cell" data-label="">Microsoft Word (Font Menu)</td>
+                                <td class="p-4 block md:table-cell" data-label="Mouse/Touchpad">
+                                    <span class="md:hidden font-semibold block mb-1">Mouse/Touchpad:</span>
                                     • Click to open the font dropdown<br>
                                     • Scroll to browse fonts, click to select<br>
                                     • Click outside to close
                                 </td>
-                                <td class="p-4">
+                                <td class="p-4 block md:table-cell" data-label="Keyboard">
+                                    <span class="md:hidden font-semibold block mb-1">Keyboard:</span>
                                     • Tab navigates through the Ribbon toolbar<br>
                                     • Enter selects font menu, Arrow keys navigate<br>
                                     • Esc closes the menu<br>
                                     • Best keyboard support of the three (Autocomplete allows typing font names)
                                 </td>
-                                <td class="p-4">
+                                <td class="p-4 block md:table-cell" data-label="Touch">
+                                    <span class="md:hidden font-semibold block mb-1">Touch:</span>
                                     • On iPhone app, highlight text to activate the font menu<br>
                                     • Scroll to browse fonts (no text input)<br>
                                     • Tap to select, tap outside to close
@@ -276,60 +285,69 @@
                 </p>
 
                 <div class="overflow-x-auto mb-8">
-                    <table class="w-full bg-dark-800/50 rounded-xl border border-white/10">
-                        <thead>
-                            <tr class="border-b border-white/10">
-                                <th class="p-4 text-left"></th>
-                                <th class="p-4 text-left">Visual Feedback</th>
-                                <th class="p-4 text-left">Textual Feedback</th>
-                                <th class="p-4 text-left">Screen Reader/Focus Order</th>
+                    <table class="w-full bg-dark-800/50 rounded-xl border border-white/10 block md:table">
+                        <thead class="block md:table-header-group">
+                            <tr class="border-b border-white/10 md:border-none block md:table-row absolute -top-full md:top-auto -left-full md:left-auto md:relative">
+                                <th class="p-4 text-left md:table-cell block"></th>
+                                <th class="p-4 text-left md:table-cell block">Visual Feedback</th>
+                                <th class="p-4 text-left md:table-cell block">Textual Feedback</th>
+                                <th class="p-4 text-left md:table-cell block">Screen Reader/Focus Order</th>
                             </tr>
                         </thead>
-                        <tbody class="text-white/80">
-                            <tr class="border-b border-white/10">
-                                <td class="p-4 font-semibold">Netflix (Genre Dropdown)</td>
-                                <td class="p-4">
+                        <tbody class="text-white/80 block md:table-row-group">
+                            <tr class="border-b border-white/10 block md:table-row mb-8 md:mb-0 bg-dark-800/50 md:bg-transparent">
+                                <td class="p-4 font-semibold block md:table-cell" data-label="">Netflix (Genre Dropdown)</td>
+                                <td class="p-4 block md:table-cell" data-label="Visual Feedback">
+                                    <span class="md:hidden font-semibold block mb-1">Visual Feedback:</span>
                                     • Dropdown button highlights on hover<br>
                                     • Dropdown expands on click, forming a rectangle<br>
                                     • UI updates based on selection (e.g., new horror content displayed below)
                                 </td>
-                                <td class="p-4">
+                                <td class="p-4 block md:table-cell" data-label="Textual Feedback">
+                                    <span class="md:hidden font-semibold block mb-1">Textual Feedback:</span>
                                     • Hovered genre name is underlined<br>
                                     • Selected genre replaces the dropdown menu
                                 </td>
-                                <td class="p-4">
+                                <td class="p-4 block md:table-cell" data-label="Screen Reader/Focus Order">
+                                    <span class="md:hidden font-semibold block mb-1">Screen Reader/Focus Order:</span>
                                     • Announces genre button<br>
                                     • Announces each linked genre category<br>
                                     • Logical focus order: Genre button → Genres listed sequentially (top to bottom, left to right)
                                 </td>
                             </tr>
-                            <tr class="border-b border-white/10">
-                                <td class="p-4 font-semibold">Apple Music (Three-Bar Menu)</td>
-                                <td class="p-4">
+                            <tr class="border-b border-white/10 block md:table-row mb-8 md:mb-0 bg-dark-800/50 md:bg-transparent">
+                                <td class="p-4 font-semibold block md:table-cell" data-label="">Apple Music (Three-Bar Menu)</td>
+                                <td class="p-4 block md:table-cell" data-label="Visual Feedback">
+                                    <span class="md:hidden font-semibold block mb-1">Visual Feedback:</span>
                                     • Selected option is highlighted on hover/click (e.g., play next song highlighted)<br>
                                     • Three-bar menu highlighted briefly on click
                                 </td>
-                                <td class="p-4">
+                                <td class="p-4 block md:table-cell" data-label="Textual Feedback">
+                                    <span class="md:hidden font-semibold block mb-1">Textual Feedback:</span>
                                     • Selected option (e.g., "Add to Playlist") updates UI accordingly<br>
                                     • Some options provide confirmation text (e.g., "Added to Playlist")
                                 </td>
-                                <td class="p-4">
+                                <td class="p-4 block md:table-cell" data-label="Screen Reader/Focus Order">
+                                    <span class="md:hidden font-semibold block mb-1">Screen Reader/Focus Order:</span>
                                     • Announces each option out loud, includes number of options<br>
                                     • Logical focus order: More Button → Each option listed sequentially<br>
                                     • Conveniently lists submenus too (e.g., share with multiple sharing options)
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="p-4 font-semibold">Microsoft Word (Font Menu)</td>
-                                <td class="p-4">
+                            <tr class="block md:table-row mb-8 md:mb-0 bg-dark-800/50 md:bg-transparent">
+                                <td class="p-4 font-semibold block md:table-cell" data-label="">Microsoft Word (Font Menu)</td>
+                                <td class="p-4 block md:table-cell" data-label="Visual Feedback">
+                                    <span class="md:hidden font-semibold block mb-1">Visual Feedback:</span>
                                     • Dropdown arrow highlighted on click while menu is active<br>
                                     • Hovered fonts highlight as the cursor moves
                                 </td>
-                                <td class="p-4">
+                                <td class="p-4 block md:table-cell" data-label="Textual Feedback">
+                                    <span class="md:hidden font-semibold block mb-1">Textual Feedback:</span>
                                     • Selected font name appears in the selection box<br>
                                     • Font name is highlighted in the text box after selection
                                 </td>
-                                <td class="p-4">
+                                <td class="p-4 block md:table-cell" data-label="Screen Reader/Focus Order">
+                                    <span class="md:hidden font-semibold block mb-1">Screen Reader/Focus Order:</span>
                                     • Reads each font name aloud when hovered<br>
                                     • Logical focus order: Toolbar → Dropdown → Fonts listed alphabetically<br>
                                     • Submenus announced for fonts with variations (e.g., "Arial → Arial Bold")
